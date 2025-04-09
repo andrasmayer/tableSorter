@@ -7,8 +7,7 @@ tableSorter.min.js is the standalone variant<br><br><br>
 
 
 
-Usage:
-
+Usage:<br><br>
 
 const {tableSorter} = await import(`./dist/js/tableSorter.esm.min.js`) //For ES6 only<br><br>
         
@@ -35,4 +34,12 @@ const table = new tableSorter({<br>
     dataSet : data,             //data array <br>
     filters : [0,1,2,3],        //th indexes you wanna filter you can skip if you doesn't need em<br>
     striped: true               //triped table. true/false or not using at all<br>
-})<br>
+})<br><br>
+
+
+Cell filters can listen to basic operators ( >, >=, <, <= ) Only when the column is numeric.<br>
+For example >= 30 in the age cell returns everyone with 30yo or older<br>
+Clicking on theads will sort the table alphabetically (asc/desc)<br>
+You can add your custom CSS (see the examples).<br><br>
+Throw a feedback to andrasmayer.github@gmail.com<br><br><br>
+I will keep this project updated in the future
