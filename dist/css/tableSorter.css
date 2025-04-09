@@ -50,7 +50,6 @@ background-color:#383a3d;
 
 .form-control {
     display: block;
-    width: 95%;
     height: calc(1.4em + .65rem + 1px); 
     padding: .1rem .2rem;
     font-size: 1rem;

@@ -11,10 +11,10 @@
         <div id="tableTarget"></div>
 
         <script type="module">
-            const {tableSorter} = await import(`./dist/js/tableSorter.esm.min.js`)
-   /*     
+            const {tableSorter} = await import(`./dist/js/tableSorter.js?version=1.0.0`)
+        
             const data = [
-                {id:"1", name:"Ed", age:72, position:"Ceo"},
+                {id:"1", name:"Ed", age:"72.21", position:"Ceo"},
                 {id:"2", name:"Tod", age:32, position:"Manager"},
                 {id:"3", name:"Helen", age:27, position:"Slave"},
                 {id:"4", name:"George", age:20, position:"Slave"},
@@ -27,16 +27,6 @@
                 {id:"11", name:"Matt", age:65, position:"Slave"},
                 ]
 
-*/
-
-const data = [
-              [0,1,2,3],
-              [1,1,2,3],
-              [2,1,2,3],
-              [3,1,2,3],
-              [4,1,2,3],
-                ]
-
             const header = ["ID","Name","Age","Position"]
 
             const table = new tableSorter({
@@ -44,7 +34,7 @@ const data = [
                     tableId : "table2",
                     header : header,
                     dataSet : data,
-                    filters : [0,1,2,3],
+                    filters : true,
                     striped: true
                 })
 

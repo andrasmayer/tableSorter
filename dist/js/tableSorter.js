@@ -1,14 +1,16 @@
 export class tableSorter {
 	constructor(obj){
-
-
-		if(obj.filters.length > Object.keys(obj.dataSet[0]).length){
-			document.querySelector("body").innerHTML = 
-			`<div>Filter length is larger ( <b>${obj.filters.length}</b> ${JSON.stringify(obj.filters)}) then the 
-			dataset key length ( <b>${Object.keys(obj.dataSet[0]).length}</b> ${JSON.stringify(Object.keys(obj.dataSet[0]))})</div>`
-			return false
+		const body = document.querySelector("body")
+		let Errors = ""
+	
+		if(obj.dataSet == null){
+			Errors += "<div>Your dataSet is empty</div>"
 		}
 
+		if(Errors != ""){
+			body.innerHTML = Errors
+			return false
+		}
 
 		this.obj = obj
 		this.cols = []
@@ -65,8 +67,8 @@ export class tableSorter {
 			columnsToShow.push(	this.th[i].getAttribute("data")	)
 			const cell = row.insertCell()
 		
-			if(	this.obj.filters.includes(i)	){
-				cell.innerHTML = `<input class="form-control" data-index="${this.columnsToShow[i]}" placeholder="...">`
+			if(	this.obj.filters == true){
+				cell.innerHTML = `<input class="form-control" style="width:${cell.clientWidth}px;" data-index="${this.columnsToShow[i]}" placeholder="${this.th[i].textContent}..">`
 				cell.addEventListener("keyup",  (e) => {
 					this.drawRows(event)
 					this.controls()
@@ -74,10 +76,11 @@ export class tableSorter {
 			}
 		}
 
-		this.obj.filters.forEach(function(v){
-			columns.push(columnsToShow[v])
-			conditions[`cell_${v}`]	=	""
+		Object.keys(this.obj.dataSet[0]).forEach((itm,key)=>{
+			columns.push(itm)
+			conditions[`cell_${key}`]	=	""
 		})
+
 	}
 	filter	=	function(e){
 		let status_ = this.status_
@@ -94,7 +97,7 @@ export class tableSorter {
 			const status_ =	[]
 			Object.keys(conditions).forEach(function(c,v){
 				const value = conditions[c].toLowerCase()
-				const cellIsNumber = /^\d+$/.test(e[cols[v]])
+				const cellIsNumber = /^\d.+$/.test(e[cols[v]])
 
 				if( cellIsNumber === true 
 					&& (  value.startsWith(">=") ||  value.startsWith(">") ||  value.startsWith("<=") ||  value.startsWith("<")  )

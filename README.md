@@ -32,8 +32,8 @@ const table = new tableSorter({<br>
     tableId : "table2",         //id for your table for later usage<br>
     header : header,            //header array<br>
     dataSet : data,             //data array <br>
-    filters : [0,1,2,3],        //th indexes you wanna filter you can skip if you doesn't need em<br>
-    striped: true               //triped table. true/false or not using at all<br>
+    filters : true,             //Individual colum searching. true/false or not using at all<br>
+    striped: true               //Striped table. true/false or not using at all<br>
 })<br><br>
 
 
