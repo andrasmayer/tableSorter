@@ -4,12 +4,12 @@
 For **vanilla** javascript <br>
 &nbsp;&nbsp;&nbsp; &lt;script src="./path/to/dist/tableSorter.min.js"&gt;&lt;/script&gt;<br>
 <br>
-For **ES6 module** structure uset <br>
-&lt;script type="module"&gt;<br>
-&nbsp;&nbsp;&nbsp; const {tableSorter} = await import("./dist/js/tableSorter.js") <br>
+For **ES6 module** structure use <br>
+#### &lt;script type="module"&gt;<br>
+ const {tableSorter} = await import("./dist/js/tableSorter.js") <br>
 **or**<br>
 &nbsp;&nbsp;&nbsp;&nbsp;const {tableSorter} = await import("./dist/js/tableSorter.esm.min.js")<br>
-&lt;/script&gt;
+#### &lt;/script&gt;
 
 
 ## Usage
@@ -29,12 +29,12 @@ For **ES6 module** structure uset <br>
 const header = ["ID","Name","Age","Position"]        
 
 const table = new tableSorter({<br>
-        &nbsp;&nbsp;&nbsp;target : "#tableTarget", &nbsp;// html tag to append your table<br>
+        &nbsp;&nbsp;&nbsp;target : "#tableTarget", &nbsp;// id if target element<br>
         &nbsp;&nbsp;&nbsp;tableId : "table2", &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// id for your table<br>
        &nbsp;&nbsp;&nbsp;header : header, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// array for header<br>
         &nbsp;&nbsp;&nbsp;dataSet : data, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//array of dataset<br>
-      &nbsp;&nbsp;&nbsp;filters : true, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// true/false or don't use it<br>
-        &nbsp;&nbsp;&nbsp;striped: true &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//true/false or don't use it<br>
+      &nbsp;&nbsp;&nbsp;filters : true, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// true/false/no use<br>
+        &nbsp;&nbsp;&nbsp;striped: true &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//true/falseno use it<br>
     })
     
                 
