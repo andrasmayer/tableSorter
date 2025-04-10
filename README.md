@@ -29,22 +29,22 @@ For **ES6 module** structure uset <br>
 const header = ["ID","Name","Age","Position"]        
 
 const table = new tableSorter({<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;target : "#tableTarget", &nbsp;&nbsp;&nbsp;&nbsp;// html tag to append your table<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tableId : "table2", &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// id for your table<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;header : header, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// array for header<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dataSet : data, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//array of dataset<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;filters : true, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// true/false or don't use it<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;striped: true &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//true/false or don't use it<br>
+        &nbsp;&nbsp;&nbsp;target : "#tableTarget", &nbsp;// html tag to append your table<br>
+        &nbsp;&nbsp;&nbsp;tableId : "table2", &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// id for your table<br>
+       &nbsp;&nbsp;&nbsp;header : header, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// array for header<br>
+        &nbsp;&nbsp;&nbsp;dataSet : data, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//array of dataset<br>
+      &nbsp;&nbsp;&nbsp;filters : true, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// true/false or don't use it<br>
+        &nbsp;&nbsp;&nbsp;striped: true &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//true/false or don't use it<br>
     })
     
                 
 
-## Filter options
+## Filer options
 You can use math operators ( >, >=, <, <= ) in colums are numbers.<br>
 Clicking on theads will sort the table alphabetically (asc/desc).<br>
 You can add your custom CSS (see the examples) or use a different file.<br>
 
-### Response
+### +1
 I will keep this project updated in the future.<br>
 Feel free to share your thoughts or as for another functionaliity.<br><br> 
 Throw a feedback to andrasmayer.github@gmail.com<br>
