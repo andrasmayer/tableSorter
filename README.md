@@ -1,14 +1,14 @@
 # Datatable for nested arrays or array of objects
 
 ## Installation
-For **vanilla** javascript <br>
-&nbsp;&nbsp;&nbsp; &lt;script src="./path/to/dist/tableSorter.min.js"&gt;&lt;/script&gt;<br>
-<br>
+For **vanilla** javascript 
+##### &lt;script src="./path/to/dist/tableSorter.min.js"&gt;&lt;/script&gt;
+
 For **ES6 module** structure use <br>
-#### &lt;script type="module"&gt;<br>
+#### &lt;script type="module"&gt;
  const {tableSorter} = await import("./dist/js/tableSorter.js") <br>
 **or**<br>
-&nbsp;&nbsp;&nbsp;&nbsp;const {tableSorter} = await import("./dist/js/tableSorter.esm.min.js")<br>
+const {tableSorter} = await import("./dist/js/tableSorter.esm.min.js")<br>
 #### &lt;/script&gt;
 
 
