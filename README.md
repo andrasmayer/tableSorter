@@ -1,45 +1,51 @@
-import the required file<br>
-tableSorter.js for ES6 module structure<br>
-same for tableSorter.esm.min.js
-tableSorter.min.js<br>
-tableSorter.min.js is the standalone variant<br><br><br>
+# Datatable for nested arrays or array of objects
+
+## Installation
+For **vanilla** javascript <br>
+&nbsp;&nbsp;&nbsp; &lt;script src="./path/to/dist/tableSorter.min.js"&gt;&lt;/script&gt;<br>
+<br>
+For **ES6 module** structure uset <br>
+&lt;script type="module"&gt;<br>
+&nbsp;&nbsp;&nbsp; const {tableSorter} = await import("./dist/js/tableSorter.js") <br>
+**or**<br>
+&nbsp;&nbsp;&nbsp;&nbsp;const {tableSorter} = await import("./dist/js/tableSorter.esm.min.js")<br>
+&lt;/script&gt;
 
 
-
-
-Usage:<br><br>
-
-const {tableSorter} = await import(`./dist/js/tableSorter.esm.min.js`) //For ES6 only<br><br>
-        
-const data = [                                          //For data you can use array of (JSON) objects or a simple nested array<br>
-    {id:"1", name:"Ed", age:72, position:"Ceo"},<br>
-    {id:"2", name:"Tod", age:32, position:"Manager"},<br>
-    {id:"3", name:"Helen", age:27, position:"Slave"},<br>
-    {id:"4", name:"George", age:20, position:"Slave"},<br>
-    {id:"5", name:"Phil", age:44, position:"Slave"},<br>
-    {id:"6", name:"Pam", age:40, position:"Slave"},<br>
-    {id:"7", name:"Otto", age:41, position:"Slave"},<br>
-    {id:"8", name:"Julia", age:43, position:"Slave"},<br>
-    {id:"9", name:"Harmony", age:40, position:"Slave"},<br>
-    {id:"10", name:"Ted", age:37, position:"Slave"},<br>
-    {id:"11", name:"Matt", age:65, position:"Slave"},<br>
-    ]<br><br>
-
-const header = ["ID","Name","Age","Position"]<br><br>
+## Usage
+    const data = [
+        {id:"1", name:"Ed", age:"72.21", position:"Ceo"},
+        {id:"2", name:"Tod", age:32, position:"Manager"},
+        {id:"3", name:"Helen", age:27, position:"Slave"},
+        {id:"4", name:"George", age:20, position:"Slave"},
+        {id:"5", name:"Phil", age:44, position:"Slave"},
+        {id:"6", name:"Pam", age:40, position:"Slave"},
+        {id:"7", name:"Otto", age:41, position:"Slave"},
+        {id:"8", name:"Julia", age:43, position:"Slave"},
+        {id:"9", name:"Harmony", age:40, position:"Slave"},
+        {id:"10", name:"Ted", age:37, position:"Slave"},
+        {id:"11", name:"Matt", age:65, position:"Slave"},
+        ]
+const header = ["ID","Name","Age","Position"]        
 
 const table = new tableSorter({<br>
-    target : "#tableTarget",    //reference to the container you wanna put the table<br>
-    tableId : "table2",         //id for your table for later usage<br>
-    header : header,            //header array<br>
-    dataSet : data,             //data array <br>
-    filters : true,             //Individual colum searching. true/false or not using at all<br>
-    striped: true               //Striped table. true/false or not using at all<br>
-})<br><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;target : "#tableTarget", &nbsp;&nbsp;&nbsp;&nbsp;// html tag to append your table<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tableId : "table2", &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// id for your table<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;header : header, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// array for header<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dataSet : data, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//array of dataset<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;filters : true, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// true/false or don't use it<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;striped: true &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//true/false or don't use it<br>
+    })
+    
+                
 
+## Filter options
+You can use math operators ( >, >=, <, <= ) in colums are numbers.<br>
+Clicking on theads will sort the table alphabetically (asc/desc).<br>
+You can add your custom CSS (see the examples) or use a different file.<br>
 
-Cell filters can listen to basic operators ( >, >=, <, <= ) Only when the column is numeric.<br>
-For example >= 30 in the age cell returns everyone with 30yo or older<br>
-Clicking on theads will sort the table alphabetically (asc/desc)<br>
-You can add your custom CSS (see the examples).<br><br>
-Throw a feedback to andrasmayer.github@gmail.com<br><br><br>
-I will keep this project updated in the future
+### Response
+I will keep this project updated in the future.<br>
+Feel free to share your thoughts or as for another functionaliity.<br><br> 
+Throw a feedback to andrasmayer.github@gmail.com<br>
+
